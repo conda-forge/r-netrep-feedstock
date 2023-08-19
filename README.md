@@ -3,6 +3,7 @@ About r-netrep-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-netrep-feedstock/blob/main/LICENSE.txt)
 
+
 About r-netrep
 --------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=NetRep
 Package license: GPL-2.0-only
 
 Summary: Functions for assessing the replication/preservation of a network module's topology across datasets through permutation testing; Ritchie et al. (2015) <doi: 10.1016/j.cels.2016.06.012>.
+
 About r-netrep
 --------------
 
