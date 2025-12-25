@@ -1,4 +1,4 @@
-{% set version = "1.2.8" %}
+{% set version = "1.2.9" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,13 +9,17 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/NetRep_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/NetRep/NetRep_{{ version }}.tar.gz
-  sha256: 31c7bba79ab6676c23cf69a380dd0c6bfa4b1e8fbd3dc41c1b19bd9523a0dbf3
+  sha256: 9adbda49f4f775644bdbb1649e9ce6ddb8abaf05de75451de07b513b41703bf1
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -44,7 +48,7 @@ requirements:
     - liblapack
   run:
     - r-base
-    - r-bh
+    #- r-bh
     - r-rcolorbrewer
     - r-rcpp >=0.11
     - r-rcpparmadillo >=0.4
