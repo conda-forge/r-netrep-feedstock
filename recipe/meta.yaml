@@ -1,4 +1,4 @@
-{% set version = "1.2.9" %}
+{% set version = "1.2.10" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/NetRep_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/NetRep/NetRep_{{ version }}.tar.gz
-  sha256: 9adbda49f4f775644bdbb1649e9ce6ddb8abaf05de75451de07b513b41703bf1
+  sha256: 9c4b5475a2fd65af7cdc28160d8f769f751a79063545bc709dce149f7a314093
 
 build:
   number: 0
